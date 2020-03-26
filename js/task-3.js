@@ -3,7 +3,7 @@ import users from './users.js';
 
 // Получить массив имен пользователей по полу (поле gender).
 const getUsersWithGender = (users, gender) => {
-    return users.filter(user => user.gender === gender);
+    return users.filter(user => user.gender === gender).map(user => user.name);
 };
 
 console.table(getUsersWithGender(users, "male"));
